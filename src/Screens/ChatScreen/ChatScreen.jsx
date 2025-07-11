@@ -8,13 +8,13 @@ import './ChatScreen.css';
 
 const ChatScreen = () => {
     const { contact_id } = useParams();
-    let contact_selected= null
-    for( const contact of contacts){
-        if(Number(contact.id) === Number(contact_id)){
+    let contact_selected = null
+    for (const contact of contacts) {
+        if (Number(contact.id) === Number(contact_id)) {
             contact_selected = contact
         }
     }
-    
+
     const [messages, setMessages] = useState(contact_selected.messages);
 
     const handleSubmitNewMessage = (e) => {
@@ -28,41 +28,44 @@ const ChatScreen = () => {
             texto: message,
             status: 'no-visto'
         }
-        const new_messages= [...messages]
+        const new_messages = [...messages]
         new_messages.push(newMessage)
         setMessages(new_messages)
     }
-  return (
-    <div className='chat-screen'>
-        {messages.map(message => {
-            return (
-                <>
-                <div className='contact-text-container'>
+    return (
+        <div className='chat-screen'>
+            <div className='chat-container'>
+                {messages.map(message => {
+                    return (
+                        <>
+                            <div className='contact-text-container'>
 
-                    <div className='contact-text' key={message.id}>
-                        <p> {message.emisor} </p>
-                        <p> {message.texto} </p>
-                    </div>
-                
-                    <div className='contact-text-info' key={message.id}>
-                        <p> {message.hora} </p>
-                        <p> {message.status} </p>
-                    </div>
-                    
-                    
-                    </div>
-                    <hr />
-                    </>
-                
-            )
-        } )}
-    <form className='input-section' onSubmit={handleSubmitNewMessage}>
-        <input className='input-chat' type="text" placeholder='Escribe tu mensaje' id='message' name='message' />
-        <button className='buttom-send' type='submit'> 💬 </button>
-    </form>
+                                <div className='contact-text' key={message.id}>
+                                    <p> {message.emisor} </p>
+                                    <p> {message.texto} </p>
+                                </div>
 
-    </div>
-  )
+                                <div className='contact-text-info' key={message.id}>
+                                    <p> {message.hora} </p>
+                                    <p> {message.status} </p>
+                                </div>
+
+
+                            </div>
+                            <hr />
+                        </>
+
+                    )
+                })}
+            </div>
+
+            <form className='input-section' onSubmit={handleSubmitNewMessage}>
+                <input className='input-chat' type="text" placeholder='Escribe tu mensaje' id='message' name='message' />
+                <button className='buttom-send' type='submit'> 💬 </button>
+            </form>
+
+        </div>
+    )
 }
 
 export default ChatScreen
