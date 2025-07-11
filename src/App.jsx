@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router'
-import ContactScreen from './Screens/ContactSCreen/ContactScreen'
+import ContactScreen from './Screens/ContactScreen/ContactScreen'
 import ChatScreen from './Screens/ChatScreen/ChatScreen'
 
 function App() {
