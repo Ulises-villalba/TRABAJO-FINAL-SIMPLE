@@ -5,6 +5,7 @@
     background-color: yellow;
     height: 100vh;
     max-height: 100vh;
+    font-family: 'Arial', sans-serif;
     
 }
 .buttom-send {
@@ -50,4 +51,9 @@
 }
 .chat-container {
     flex: 1;
+}
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Route, Routes } from 'react-router'
 import ContactScreen from './Screens/ContactScreen/ContactScreen'
 import ChatScreen from './Screens/ChatScreen/ChatScreen'
+import Chart from 'chart.js/auto';
 
 function App() {
 
