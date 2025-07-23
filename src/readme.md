@@ -1,0 +1,1 @@
+La pagina que elegi es una copia de Watsapp con personajes de los Simpsons, por favor no me maten los fanaticos. Hice lo mejor que pude, desde ya estoy muy agradecido con todo lo aprendido en la cursada, lo que me hubiera gustado hubiera sido profundizar un poco mas en Javascript ya que me costo muchisimo llevar a cabo el desafio.
